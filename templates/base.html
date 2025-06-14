@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Flask + Tailwind Starter{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='dist/styles.css') }}">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <header class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-lg">
+        <div class="container mx-auto px-4 py-6 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+                <span class="font-bold text-xl">Flask + Tailwind</span>
+            </div>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="https://flask.palletsprojects.com/" class="hover:text-indigo-200 transition-colors" target="_blank">Flask Docs</a></li>
+                    <li><a href="https://tailwindcss.com/docs" class="hover:text-indigo-200 transition-colors" target="_blank">Tailwind Docs</a></li>
+                    <li><a href="https://github.com" class="hover:text-indigo-200 transition-colors" target="_blank">GitHub</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="bg-gray-800 text-gray-300 py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-lg font-semibold mb-2">Flask + Tailwind Starter</h3>
+                    <p>A modern web development template</p>
+                </div>
+                <div>
+                    <p>Created with ❤️ for better web development</p>
+                    <p class="text-sm mt-2">© 2023 All rights reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

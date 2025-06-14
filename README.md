@@ -2,6 +2,12 @@
 
 A streamlined starter template for building web applications using Python Flask and Tailwind CSS.
 
+<div align="center">
+  
+![Example Screenshot](flask_tailwind_demo.png)
+
+</div>
+
 ## Prerequisites
 - Python 3.x
 - Node.js and npm
@@ -101,7 +107,7 @@ npx tailwindcss -i ./static/src/styles.css -o ./static/dist/styles.css --watch
 Run the Flask application:
 
 ```bash
-flask run
+python app.py
 ```
 
 The application will be available at `http://localhost:5000`.
